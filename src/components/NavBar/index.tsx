@@ -6,11 +6,14 @@ import { useTheme } from '@mui/styles';
 import { Theme } from "@mui/material";
 
 import useStyles from './style'
+import { useState } from 'react';
+import Sidebar from '../Sidebar';
 const Navbar = () => {
   const classes = useStyles()
   const theme:Theme = useTheme()
   const isMobile =useMediaQuery('(max-width:600px)')
   const isLoged =true
+  const [mobileOpen, setMobileOpen] = useState(true)
   
   return (
     <>
@@ -53,7 +56,26 @@ const Navbar = () => {
              </div>
           </Toolbar>
        </AppBar>
-
+       <div>
+           <nav className={classes.drawer}>
+               {isMobile ? (
+                <Drawer
+                variant='temporary'
+                anchor='right'
+                open={mobileOpen}
+                className={classes.drawerBg}
+                classes={{paper:classes.drawerPaper}}
+                ModalProps={{keepMounted:true}}
+                >
+                  <Sidebar  setMobileOpen={setMobileOpen}/>
+                </Drawer>
+               ):(
+                <Drawer classes={{paper:classes.drawerPaper}} variant='permanent' open>
+                   <Sidebar  setMobileOpen={setMobileOpen}/>
+                </Drawer>
+               )}
+           </nav>
+       </div>
     </>
   )
 }
