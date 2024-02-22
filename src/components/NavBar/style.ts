@@ -1,6 +1,6 @@
 import { makeStyles } from "@mui/styles";
 import { Theme } from "@mui/material";
-
+const drawerWidth = '240px'
 export default makeStyles((theme:Theme) => ({
     root:{
       
@@ -22,6 +22,22 @@ export default makeStyles((theme:Theme) => ({
       }
     },
     LinkButton: {
+      '&:hover' : {
+        color: 'white !important',
+        textDecoration:'none'
+      }
+    },
+    drawer: {
+      [theme.breakpoints.up('sm')]:{
+        width:drawerWidth,
+        flexShrink:0
+      }
+    },
+    drawerBg: {
 
+    },
+    drawerPaper:{
+      width:drawerWidth
     }
+
 }));
