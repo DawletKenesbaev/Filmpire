@@ -13,6 +13,7 @@
     "@alan-ai/alan-sdk-web": "^1.8.54",
     "@emotion/react": "^11.11.3",
     "@emotion/styled": "^11.11.0",
+    "@material-ui/styles": "^4.11.5",
     "@mui/icons-material": "^5.15.10",
     "@mui/material": "^5.15.10",
     "@mui/styles": "^5.15.10",
