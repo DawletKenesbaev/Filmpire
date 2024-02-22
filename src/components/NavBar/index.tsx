@@ -44,7 +44,7 @@ const Navbar = () => {
                  color='inherit'
                  className={classes.LinkButton}
                  >
-                  {!isMobile && <>My Movies</>}
+                  {!isMobile && <>My Movies &nbsp;</>}
                   <Avatar style={{width:'30px',height:'30px'}}
                   src='https://www.google.com/url?sa=i&url=https%3A%2F%2Fpixabay.com%2Fvectors%2Favatar-icon-placeholder-facebook-1577909%2F&psig=AOvVaw0KbWNv6IYw_AAxPNS1urjD&ust=1708681672039000&source=images&cd=vfe&opi=89978449&ved=0CBMQjRxqFwoTCNi87bHVvoQDFQAAAAAdAAAAABAE'
                    alt='profile'/>
