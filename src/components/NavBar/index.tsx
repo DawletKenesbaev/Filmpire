@@ -13,7 +13,7 @@ const Navbar = () => {
   const theme:Theme = useTheme()
   const isMobile =useMediaQuery('(max-width:600px)')
   const isLoged =true
-  const [mobileOpen, setMobileOpen] = useState(true)
+  const [mobileOpen, setMobileOpen] = useState(false)
   
   return (
     <>
@@ -25,6 +25,7 @@ const Navbar = () => {
               edge='start'
               style={{ outline:'none'}}
               className={classes.menuButton}
+              onClick={() =>  setMobileOpen((prevMobileOpen) => !prevMobileOpen)}
               >
                 <Menu />
               </IconButton>
@@ -66,6 +67,7 @@ const Navbar = () => {
                 className={classes.drawerBg}
                 classes={{paper:classes.drawerPaper}}
                 ModalProps={{keepMounted:true}}
+                onClose={() =>  setMobileOpen((prevMobileOpen) => !prevMobileOpen)}
                 >
                   <Sidebar  setMobileOpen={setMobileOpen}/>
                 </Drawer>
