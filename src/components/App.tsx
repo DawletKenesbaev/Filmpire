@@ -1,9 +1,9 @@
 import {Route,Routes} from 'react-router-dom'
 import Actors from './Actors'
-import Movie from './Movie'
+import Movies from './Movies'
 import Navbar from './NavBar'
 import Profile from './Profile'
-import Movies from './MovieInformation'
+import MovieInfo from './MovieInformation'
 
 import {CssBaseline} from '@mui/material'
 import useStyles from './styles'
@@ -18,8 +18,8 @@ const App = () => {
       <main className={classes.content}>
         <div className={classes.toolbar} />
         <Routes>
-          <Route path='/'  element={<Movie />}/>
-          <Route path='/movie/:id'  element={<Movies />}/>
+          <Route path='/'  element={<Movies />}/>
+          <Route path='/movie/:id'  element={<MovieInfo />}/>
           <Route path='/profile/:id'  element={<Profile />}/>
           <Route path='/actors/:id'  element={<Actors />}/>
         </Routes>
