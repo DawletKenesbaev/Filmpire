@@ -30,3 +30,5 @@ export const getGenres = ({ method, url }: Props): Promise<Genre[]> => {
       return []; // Return empty array in case of error
     });
 };
+
+import { CreateApi } from '@reduxjs/toolkit/query';

@@ -3,6 +3,7 @@ import { Grid, Grow, Rating, Tooltip, Typography } from "@mui/material"
 import { useEffect, useState } from 'react';
 import useStyles from  './style'
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
  interface Movie {
   adult: boolean;
@@ -23,12 +24,14 @@ import { Link } from 'react-router-dom';
 
 
 const MovieList = () => {
+  const [page, setpage] = useState(1)
+  const {genreOrCategoryName } = useSelector((state)=> state.currentGenreOrCategory);
   const classes = useStyles()
   const [data, setData] = useState<{ results: Movie[] } | null>(null); // Specify the type of data state  
   useEffect(() => {     
   const options: AxiosRequestConfig = {
       method: 'GET',
-      url: 'https://api.themoviedb.org/3/discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc',
+      url: 'https://api.themoviedb.org/3/movie/upcoming?page=1&api_key=a1a10ba52dd11a89e1b35ce8be62143a',
       headers: {
         accept: 'application/json',
         Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhMWExMGJhNTJkZDExYTg5ZTFiMzVjZThiZTYyMTQzYSIsInN1YiI6IjY1ZDcwNWUyMjdkYjYxMDE0YTQ0N2U1ZCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.THOr8viWHo3EYJvYbC9V27jmWHVRMOO3JRV6svtgMqQ'
