@@ -4,6 +4,6 @@ import genreOrCategoruReducer from '../features/currentGenreOrCategory';
 
 export default configureStore({
     reducer:{
-        currentGenreOrCategory:genreOrCategoruReducer
+        currentGenreOrCategory:genreOrCategoruReducer,
     }
 })
