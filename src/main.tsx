@@ -13,8 +13,8 @@ ReactDOM.render(
     <Provider store={store}>
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <App />
-      </BrowserRouter>
+        <App /> 
+      </BrowserRouter>  
     </ThemeProvider>
     </Provider>
   </React.StrictMode>,

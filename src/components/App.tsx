@@ -10,6 +10,7 @@ import useStyles from './styles'
 
 const App = () => {
   const classes = useStyles();
+  console.log(process.env.REACT_APP_TMDB_KEY);
 
   return (
     <div className={classes.root}>

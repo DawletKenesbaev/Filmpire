@@ -31,4 +31,3 @@ export const getGenres = ({ method, url }: Props): Promise<Genre[]> => {
     });
 };
 
-import { CreateApi } from '@reduxjs/toolkit/query';
