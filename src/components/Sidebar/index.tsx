@@ -19,7 +19,7 @@ import  genreIcons  from '../../assets/genres';
 const redLogo = 'https://fontmeme.com/permalink/210930/6854ae5c7f76597cf8680e48a2c8a50a.png';
 const blueLogo = 'https://fontmeme.com/permalink/210930/8531c658a743debe1e1aa1a2fc82006e.png';
 
-const Sidebar = ({setMobile}) => {
+const Sidebar = () => {
   const theme: Theme = useTheme();
   const classes = useStyles();
   const [genres, setGenres] = useState<GenresProps[]>([]);
