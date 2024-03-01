@@ -1,6 +1,6 @@
 import { Theme } from "@mui/material";
 import { makeStyles } from "@mui/styles";
-
+// change to Tailwind css
 export default makeStyles((theme:Theme) => ({
     root:{
       width:'100%'

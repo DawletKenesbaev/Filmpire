@@ -5,6 +5,7 @@ import Navbar from './NavBar'
 import Profile from './Profile'
 import MovieInfo from './MovieInformation'
 
+
 import {CssBaseline} from '@mui/material'
 import useStyles from './styles'
 
